@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34031.279
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P2PClient", "P2PClient.csproj", "{000C99F2-D55E-4B09-844A-2C21EACFBBA8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P2PServer", "..\P2PServer\P2PServer.csproj", "{76A49AE0-9E1D-4267-AAB3-DD5A14C28CCA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{000C99F2-D55E-4B09-844A-2C21EACFBBA8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{000C99F2-D55E-4B09-844A-2C21EACFBBA8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{000C99F2-D55E-4B09-844A-2C21EACFBBA8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{000C99F2-D55E-4B09-844A-2C21EACFBBA8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{76A49AE0-9E1D-4267-AAB3-DD5A14C28CCA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{76A49AE0-9E1D-4267-AAB3-DD5A14C28CCA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{76A49AE0-9E1D-4267-AAB3-DD5A14C28CCA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{76A49AE0-9E1D-4267-AAB3-DD5A14C28CCA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6865A6C5-69D4-4A65-94B3-573C8F5B1825}
+	EndGlobalSection
+EndGlobal
