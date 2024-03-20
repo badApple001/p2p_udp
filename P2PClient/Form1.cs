@@ -215,16 +215,19 @@ namespace P2PClient
 
 
             //加入消息队列
+            var chatMsg = new MsgTextReq( )
+            {
+                content = content,
+                ipv4_address = ClientData.Ins.ipv4_address,
+                chatId = ClientData.Ins.chatID
+            };
             p2pPkgs.Enqueue( new P2pData( )
             {
                 target_ip = ipv4_address,
-                pkg = new MsgTextReq( )
-                {
-                    content = content,
-                    ipv4_address = ClientData.Ins.ipv4_address
-                }
+                pkg = chatMsg
             } );
-            ClientData.Ins.chatHistory[ ClientData.Ins.chatID++ ] = ( MsgTextReq ) p2pPkgs.Peek( ).pkg;
+            ClientData.Ins.chatHistory[ ClientData.Ins.chatID++ ] = chatMsg;
+
 
             //清空输入框
             input_send.Text = "";
@@ -240,7 +243,7 @@ namespace P2PClient
                 P2pMgr.Ins.Send( msg, ipv4_address );
                 P2pMgr.Ins.Send2Server( msg );
 
-                Logger.Debug( $"打洞->{ipv4_address}" );
+                //Logger.Debug( $"打洞->{ipv4_address}" );
 
 
                 //打洞超时
@@ -330,7 +333,7 @@ namespace P2PClient
 
                 if ( ClientData.Ins.bindUsers.Count > 0 )
                 {
-                    Logger.Debug( "PING请求 保持活跃 避免NAT洞自动关闭" );
+                    //Logger.Debug( "PING请求 保持活跃 避免NAT洞自动关闭" );
                     long currentTimeStamps = DateTimeUtils.GetCurrentTimestamps_MillSeconds( );
                     var msgbytes = new MsgPingReq( ).GetBytes( );
                     foreach ( var u in ClientData.Ins.bindUsers )

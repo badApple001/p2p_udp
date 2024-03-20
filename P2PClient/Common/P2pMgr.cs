@@ -4,7 +4,7 @@ using System.Net;
 using System.Net.Sockets;
 using System.Text;
 
-public class P2pMgr
+public class P2pMgr 
 {
     public static P2pMgr Ins { get; private set; } = new P2pMgr( );
 
